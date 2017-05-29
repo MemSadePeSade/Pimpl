@@ -8,7 +8,10 @@ Test::Test(std::string name)
 
 Test::~Test()
 {
-	delete pImpl;
+	if (pImpl)
+	{
+		delete pImpl;
+	}
 }
 
 std::string Test::get_name()
